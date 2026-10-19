@@ -1,0 +1,94 @@
+.wecare-branches { min-height: 100vh; background: var(--cp-bg); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.wecare-branches .branches-header {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 14px 48px; background: var(--cp-white); border-bottom: 1px solid var(--cp-line);
+}
+.wecare-branches .branches-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 20px; color: var(--cp-blue-dark);
+}
+.wecare-branches .branches-logo {
+  display: grid; place-items: center; width: 38px; height: 38px;
+  border-radius: 10px; background: var(--cp-blue); color: #fff;
+}
+.wecare-branches .branches-nav { display: flex; gap: 28px; font-weight: 500; color: var(--cp-muted); }
+.wecare-branches .branches-nav a {
+  padding: 6px 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
+}
+.wecare-branches .branches-nav a:hover,
+.wecare-branches .branches-nav a.active { color: var(--cp-blue); border-color: var(--cp-blue); }
+.wecare-branches .header-book-button {
+  padding: 9px 18px; border-radius: 10px; background: var(--cp-blue);
+  color: #fff; font-weight: 600; transition: background .15s;
+}
+.wecare-branches .header-book-button:hover { background: var(--cp-blue-dark); }
+.wecare-branches .mobile-menu-button { display: none; padding: 6px; color: var(--cp-ink); }
+
+.wecare-branches .branches-content { max-width: 1180px; margin: 0 auto; padding: 64px 48px 80px; }
+.wecare-branches .branches-intro h1 { font-size: clamp(30px, 4vw, 42px); letter-spacing: -0.02em; }
+.wecare-branches .branches-intro p { margin-top: 10px; font-size: 18px; color: var(--cp-muted); }
+
+.wecare-branches .branch-search {
+  position: relative; display: flex; align-items: center; gap: 10px;
+  max-width: 560px; margin: 32px 0 36px; padding: 0 16px;
+  background: #fff; border: 1.5px solid var(--cp-line); border-radius: 12px;
+  color: var(--cp-muted); transition: border-color .15s, box-shadow .15s;
+}
+.wecare-branches .branch-search:focus-within {
+  border-color: var(--cp-blue); box-shadow: 0 0 0 4px rgba(15, 111, 184, .12);
+}
+.wecare-branches .branch-search input {
+  flex: 1; min-width: 0; padding: 14px 0; border: 0; outline: 0;
+  background: transparent; font: inherit; color: var(--cp-ink);
+}
+.wecare-branches .branch-search input::placeholder { color: #93a1af; }
+
+.wecare-branches .branch-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;
+}
+.wecare-branches .branch-card {
+  position: relative; display: flex; flex-direction: column; padding: 28px;
+  background: #fff; border: 1px solid var(--cp-line); border-radius: 16px;
+  transition: box-shadow .2s, transform .2s;
+}
+.wecare-branches .branch-card:hover { box-shadow: 0 14px 34px rgba(15, 111, 184, .12); transform: translateY(-2px); }
+.wecare-branches .open-badge {
+  align-self: flex-start; margin-bottom: 14px; padding: 4px 10px; border-radius: 999px;
+  background: #e2f6f3; color: #0c8a82; font-size: 11px; font-weight: 700; letter-spacing: .1em;
+}
+.wecare-branches .branch-card h2 { font-size: 19px; margin-bottom: 16px; }
+.wecare-branches .branch-details {
+  display: grid; gap: 12px; flex: 1; margin-bottom: 24px; color: var(--cp-muted); font-size: 15px;
+}
+.wecare-branches .branch-details li { display: flex; align-items: flex-start; gap: 10px; }
+.wecare-branches .branch-details svg { flex: none; margin-top: 4px; color: var(--cp-teal); }
+.wecare-branches .branch-details .pin-icon { color: var(--cp-blue); }
+.wecare-branches .branch-book-button {
+  padding: 11px 16px; border-radius: 10px; background: #eaf4fb;
+  color: var(--cp-blue); font-weight: 600; transition: background .15s, color .15s;
+}
+.wecare-branches .branch-book-button:hover { background: var(--cp-blue); color: #fff; }
+
+.wecare-branches .empty-results { padding: 40px 0; text-align: center; color: var(--cp-muted); }
+
+.wecare-branches .branches-notice {
+  position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%);
+  padding: 12px 22px; border-radius: 10px; background: var(--cp-ink); color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25); z-index: 50;
+}
+
+@media (max-width: 900px) {
+  .wecare-branches .branches-header { padding: 12px 20px; flex-wrap: wrap; }
+  .wecare-branches .header-book-button { display: none; }
+  .wecare-branches .mobile-menu-button { display: block; margin-left: auto; }
+  .wecare-branches .branches-nav { display: none; width: 100%; flex-direction: column; gap: 4px; padding-top: 8px; }
+  .wecare-branches .branches-nav.is-open { display: flex; }
+  .wecare-branches .branches-content { padding: 40px 20px 56px; }
+}
