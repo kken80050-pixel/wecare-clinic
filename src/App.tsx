@@ -6,6 +6,8 @@ import { Branches } from './Branches';
 import { Booking } from './Booking';
 import { Login } from './Login';
 import { Register } from './Register';
+import { Dashboard } from './Dashboard';
+import { AppointmentDetails } from './AppointmentDetails';
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
           <Route path="/book" element={<RequireAuth><Booking /></RequireAuth>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
+          <Route path="/appointment/:reference" element={<RequireAuth><AppointmentDetails /></RequireAuth>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>

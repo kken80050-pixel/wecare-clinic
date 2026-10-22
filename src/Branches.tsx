@@ -23,9 +23,7 @@ export function Branches() {
         </Link>
         <nav className={menuOpen ? 'branches-nav is-open' : 'branches-nav'} aria-label="Primary navigation">
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <Link className="active" to="/branches" onClick={() => setMenuOpen(false)}>Our Branches</Link>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
         <button className="header-book-button" onClick={() => navigate('/book')}>Book an Appointment</button>
         <button className="mobile-menu-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
@@ -56,5 +54,16 @@ export function Branches() {
         </div>
         {filteredBranches.length === 0 && <p className="empty-results">No branches match that search. Try a city or district name.</p>}
       </section>
+            <footer className="site-footer" id="contact">
+        <div>
+          <h2>WeCare Multi-Branch Clinic</h2>
+          <p>Centralized Patient Appointment &amp; Outpatient Scheduling Network</p>
+          <small>© 2026 WeCare Clinic Organization. All rights reserved.</small>
+        </div>
+        <div className="footer-right">
+          <p><Link to="/">Home</Link><span> • </span><Link to="/branches">Our Branches</Link><span> • </span><a href="#staff">Staff Portal</a></p>
+          <p>Support Hotline: 0997-297-3652 | wecare.mdc@yahoo.com</p>
+        </div>
+      </footer>
     </main>;
 }

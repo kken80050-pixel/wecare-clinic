@@ -49,3 +49,7 @@
 .wecare-auth .auth-switch { margin-top: 22px; text-align: center; font-size: 14px; color: var(--cp-muted); }
 .wecare-auth .auth-switch a { color: var(--cp-blue); font-weight: 600; }
 .wecare-auth .auth-switch a:hover { text-decoration: underline; }
+
+.wecare-auth .auth-back { margin-top: 22px; text-align: center; font-size: 14px; color: var(--cp-muted); }
+.wecare-auth .auth-back a { color: var(--cp-blue); font-weight: 600; }
+.wecare-auth .auth-back a:hover { text-decoration: underline; }

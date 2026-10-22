@@ -15,14 +15,12 @@ export function Appointment() {
   return <main className="WeCare-site">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="WeCare Clinic home">
-          <span className="brand-mark" aria-hidden="true"><Plus size={25} strokeWidth={2.7} /></span>
+          <span className="brand-mark" aria-hidden="true"><Plus size={24} strokeWidth={2.8} /></span>
           <span>WeCare Clinic</span>
         </a>
         <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Primary navigation">
           <a className="active" href="#top" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <Link to="/branches" onClick={() => setMenuOpen(false)}>Our Branches</Link>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
         <div className="header-actions">
           <button className="text-action" onClick={user ? logout : () => navigate('/login')}>{user ? 'Log Out' : 'Log In'}</button>

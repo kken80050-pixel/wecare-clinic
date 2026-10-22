@@ -68,7 +68,7 @@
   display: grid; gap: 12px; flex: 1; margin-bottom: 24px; color: var(--cp-muted); font-size: 15px;
 }
 .wecare-branches .branch-details li { display: flex; align-items: flex-start; gap: 10px; }
-.wecare-branches .branch-details svg { flex: none; margin-top: 4px; color: var(--cp-teal); }
+.wecare-branches .branch-details svg { flex: none; margin-top: 4px; color: var(--cp-blue); }
 .wecare-branches .branch-details .pin-icon { color: var(--cp-blue); }
 .wecare-branches .branch-book-button {
   padding: 11px 16px; border-radius: 10px; background: #eaf4fb;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Plus } from 'lucide-react';
+import { Plus, ArrowLeft } from 'lucide-react';
 import { useAuth } from './AuthContext';
 import type { Branch } from './BranchesData';
 import './Auth.css';
@@ -22,7 +22,7 @@ export function Login() {
       setError(result);
       return;
     }
-    navigate(returnTo?.from ?? '/', { state: returnTo?.branch ? { branch: returnTo.branch } : undefined });
+    navigate(returnTo?.from ?? '/dashboard', { state: returnTo?.branch ? { branch: returnTo.branch } : undefined });
   };
 
   return <main className="wecare-auth">
@@ -40,6 +40,7 @@ export function Login() {
           <button className="primary-button auth-submit" type="submit">Log In</button>
         </form>
         <p className="auth-switch">Not yet registered? <Link to="/register" state={returnTo}>Register here</Link></p>
+        <p className = "auth-back"><Link to = "/"><ArrowLeft size={15} /> Return to Homepage</Link></p>
       </section>
     </main>;
 }
